@@ -3,7 +3,7 @@ clear all
 close all
 
 %% Read Entire Video %%%%
-mov = VideoReader('C:\Users\Amir\Pictures\Camera Roll\aclab_video_ISEC.mp4');  %WIN_20170508_13_45_27_Pro
+mov = VideoReader('sample_video\aclab_video_TF.mp4');  %WIN_20170508_13_45_27_Pro
 i=0;
 while hasFrame(mov)
 i=i+1;
@@ -12,14 +12,14 @@ video(:,:,i)=vid;
 end
 
 %% Synchonize IMU and Video
-video=video(:,:,1:size(video,3)/3625:end); %obtain this number from csv file
+video=video(:,:,1:size(video,3)/339:end); %obtain this number from csv file
 
 %% Read IMU data %%%
 showfig = 0;
 l_start = 1;
-l_end = 3625; %size(video,3); obtain this number from csv file
+l_end = 339; %size(video,3); obtain this number from csv file
 frq=30;
-filename='C:\Users\Amir\Pictures\Camera Roll\aclab_data_ISEC.csv';
+filename='sample_video\aclab_data_TF.csv';
 [data_IMU,data_lables,t] = iPhone_IMU_reading(filename,frq,l_start,l_end,showfig);
 %%%Acceleration & Gravity data
 x_g = data_IMU(:,5)*9.81; % X gravity * g
