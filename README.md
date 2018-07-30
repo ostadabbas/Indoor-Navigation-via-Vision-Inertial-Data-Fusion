@@ -4,34 +4,30 @@ This is the code for the following paper:
 
 Farnoosh, A., Nabian, M., Closas, P., & Ostadabbas, S. (2018, April). First-person indoor navigation via vision-inertial data fusion. In Position, Location and Navigation Symposium (PLANS), 2018 IEEE/ION (pp. 1213-1222). IEEE.
 
-![Algorithm Result](figs/hallway_results.PNG)
-
+![Algorithm Result](figs/hallway_results.png)
 
 Contact: 
 [Amirreza Farnoosh](farnoosh.a@husky.neu.edu),
-
 [Sarah Ostadabbas](ostadabbas@ece.neu.edu)
-
 
 ## Contents   
 * [1. Requirement](#1-requirement)
-* [2. iPhone APP for Collecting Video-IMU](#2-iPhone-APP-for-Collecting-Video-IMU)
-* [3. Running Code for Hallway Video](#3-Running-Code-for-Hallway-Video)
+* [2. iPhone App for Collecting Video-IMU](#2-iphone-app-for-collecting-video-imu)
+* [3. Running Code for Hallway Video](#3-running-code-for-hallway-video)
 * [Citation](#citation)
 * [License](#license)
-
 
 ## 1. Requirement 
 
 This code is written with MATLAB R2016b
 
-## 2. iPhone APP for Collecting Video-IMU
+## 2. iPhone App for Collecting Video-IMU
 
 Contact [Sarah Ostadabbas](ostadabbas@ece.neu.edu) to request access to our iPhone App for collecting synchronous video and IMU data with adjustable frequency   
 
 ## 2. Sample Video 
 
-The original video of the hallway used for experiments in the paper along with its IMU measurements collected with out iPhone APP is included in `./sample_video/` directory.  
+The original video of the hallway used for experiments in the paper along with its IMU measurements collected with our iPhone App is included in `./sample_video/` directory.  
 
 ## 3. Running Code for Hallway Video  
 
@@ -42,9 +38,9 @@ This code contains the following sections:
 * Read entire video
 * Read IMU data
 * Synchonize IMU and video (if not)
-* Apply GMM Method On each frame
+* Apply GMM Method on each frame
 * Straight line grouping
-* Find aLpha, beta and amma for each frame from vanishing directions
+* Find alpha, beta and gamma for each frame from vanishing directions
 * Kalman filter fusion of IMU and video
 * Horizon line detection
 * Plane detection & depth/width inference
@@ -62,12 +58,8 @@ If you find our work useful in your research please consider citing our paper:
   year={2018},
   organization={IEEE}
 }
-
 ```
 
 ## License 
 * This code is for non-commercial purpose only. For other uses please contact ACLab of NEU. 
 * No maintenance service
-
-
-
